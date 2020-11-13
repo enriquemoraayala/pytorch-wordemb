@@ -80,7 +80,7 @@ VocabAndTensor load_glove(const char * filename){
         }
         fclose(fp);
     }
-    return {vocab, dest};
+    return VocabAndTensor(vocab, dest);
 }
 
 
@@ -117,7 +117,7 @@ VocabAndTensor load_word2vec(const char * filename){
         }
         fclose(fp);
     }
-    return {vocab, dest};
+     return VocabAndTensor(vocab, dest);
 }
 
 VocabAndTensor load_word2vec_bin(const char * filename){
@@ -154,7 +154,7 @@ VocabAndTensor load_word2vec_bin(const char * filename){
         
         fclose(fp);
     }
-    return {vocab, dest};
+     return VocabAndTensor(vocab, dest);
 }
 
 
